@@ -932,9 +932,19 @@ local Button = TwoTab:CreateButton({
 })
 
 local Button = TwoTab:CreateButton({
-   Name = "",
+   Name = "Clip",
    Callback = function()
-      
+      if Noclipping then
+         Noclipping:Disconnect()
+      end
+      Clip = true
+      if args[1] and args[1] == 'nonotify' then return end
+      Rayfield:Notify({
+         Title = "Noclip",
+         Content = "Noclip Disabled",
+         Duration = 10,
+         Image = 0,
+      })
    end,
 })
 
