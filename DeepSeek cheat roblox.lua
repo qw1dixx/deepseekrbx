@@ -904,3 +904,120 @@ local Button = OneTab:CreateButton({
       game:Shutdown()
    end,
 })
+
+local Noclipping = nil
+local Button = TwoTab:CreateButton({
+   Name = "Noclip",
+   Callback = function()
+      Clip = false
+	wait(0.1)
+	local function NoclipLoop()
+		if Clip == false and speaker.Character ~= nil then
+			for _, child in pairs(speaker.Character:GetDescendants()) do
+				if child:IsA("BasePart") and child.CanCollide == true and child.Name ~= floatName then
+					child.CanCollide = false
+				end
+			end
+		end
+	end
+	Noclipping = RunService.Stepped:Connect(NoclipLoop)
+	if args[1] and args[1] == 'nonotify' then return end
+	Rayfield:Notify({
+      Title = "Noclip",
+      Content = "Noclip Enabled",
+      Duration = 10,
+      Image = 0,
+   })
+   end,
+})
+
+local Button = TwoTab:CreateButton({
+   Name = "",
+   Callback = function()
+      
+   end,
+})
+
+local Button = TwoTab:CreateButton({
+   Name = "",
+   Callback = function()
+      
+   end,
+})
+
+local Button = TwoTab:CreateButton({
+   Name = "",
+   Callback = function()
+      
+   end,
+})
+
+local Button = TwoTab:CreateButton({
+   Name = "",
+   Callback = function()
+      
+   end,
+})
+
+local Button = TwoTab:CreateButton({
+   Name = "",
+   Callback = function()
+      
+   end,
+})
+
+local Button = TwoTab:CreateButton({
+   Name = "",
+   Callback = function()
+      
+   end,
+})
+
+local Button = TwoTab:CreateButton({
+   Name = "",
+   Callback = function()
+      
+   end,
+})
+
+local Button = TwoTab:CreateButton({
+   Name = "",
+   Callback = function()
+      
+   end,
+})
+
+local Button = TwoTab:CreateButton({
+   Name = "",
+   Callback = function()
+      
+   end,
+})
+
+local Button = TwoTab:CreateButton({
+   Name = "",
+   Callback = function()
+      
+   end,
+})
+
+local Button = TwoTab:CreateButton({
+   Name = "",
+   Callback = function()
+      
+   end,
+})
+
+local Button = TwoTab:CreateButton({
+   Name = "",
+   Callback = function()
+      
+   end,
+})
+
+local Button = TwoTab:CreateButton({
+   Name = "",
+   Callback = function()
+      
+   end,
+})
